@@ -53,7 +53,7 @@ body {
 /*Remove bullet points on images*/
 #gallery ul li {
     list-style-type: none;
-    margin: 1px;
+    margin: 10px;
 }
 
 /*Thumbnail Images*/
@@ -61,5 +61,27 @@ body {
     width: 13vw;
     height: auto;
     cursor: pointer;
-    border: 5px solid black;
+}
+
+.desaturate {
+    filter: grayscale(100%);
+    outline: 5px solid black;
+    transition: filter 0.5s ease;
+}
+
+.desaturate:hover {
+    filter: grayscale(50%);
+    outline: 5px solid darkred;
+    transition: transform .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.saturate {
+    filter: grayscale(0%);
+    outline: 5px solid red;
+}
+
+.saturate:hover {
+    transition: transform .2s ease-in-out;
+    transform: scale(1.1);
 }
