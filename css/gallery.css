@@ -1,0 +1,46 @@
+/*Setup header*/
+h1 {
+    font-family: helvetica, arial, sans-serif;
+    text-align: center;
+}
+
+/*Centered using flexbox*/
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Featured Image Container*/
+#gallery figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Featured Image*/
+#gallery figure img {
+    max-width: 80vh;
+    height: auto;
+}
+
+/*Thumbnail Container*/
+#gallery ul {
+    display: flex;
+    justify-content: center;
+}
+
+/*Remove bullet points on images*/
+#gallery ul li {
+    list-style-type: none;
+    margin: 1px;
+}
+
+/*Thumbnail Images*/
+#gallery ul li img {
+    width: 13vw;
+    height: auto;
+    cursor: pointer;
+    border: 5px solid black;
+}

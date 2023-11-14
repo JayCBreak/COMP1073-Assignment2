@@ -5,6 +5,7 @@ const images = ['flowers-pink', 'flowers-purple', 'flowers-red', 'flowers-white'
 
 // Add all the images to the thumbnails
 for(let i = 0; i < images.length; i++) {
+    thumbnails[i].src = "https://raw.githubusercontent.com/JayCBreak/COMP1073-Assignment2/master/images/[filename]-small.jpg"
     thumbnails[i].src = thumbnails[i].src.replace("[filename]", images[i]);
     thumbnails[i].alt = images[i] + "-small.jpg"
 }
@@ -12,6 +13,11 @@ for(let i = 0; i < images.length; i++) {
 // Add click event to all thumbnails
 thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener('click', function(event) {
+        // Set an outline to show the selected image
+        thumbnails.forEach(clearThumbnail => {
+            clearThumbnail.style.border = "5px solid black"
+        })
+        thumbnail.style.border = "5px solid red";
         // Select the featured image and its caption
         let featuredImage = document.querySelector('#gallery figure img');
         let featuredImageCaption = document.querySelector('#gallery figure figcaption');
