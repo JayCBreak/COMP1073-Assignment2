@@ -4,6 +4,8 @@ const images = ['flowers-pink', 'flowers-purple', 'flowers-red', 'flowers-white'
 
 
 // Add all the images to the thumbnails
+// Images are loaded via github link so that they appear on github pages
+// This means longer loading time BUT the images will actually show up on the website instead of only locally
 for(let i = 0; i < images.length; i++) {
     thumbnails[i].src = "https://raw.githubusercontent.com/JayCBreak/COMP1073-Assignment2/master/images/[filename]-small.jpg"
     thumbnails[i].src = thumbnails[i].src.replace("[filename]", images[i]);

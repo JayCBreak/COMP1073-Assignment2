@@ -2,6 +2,17 @@
 h1 {
     font-family: helvetica, arial, sans-serif;
     text-align: center;
+    font-size: 4rem;
+}
+
+p, figcaption {
+    font-size: 2rem;
+}
+
+/*Background*/
+html {
+    background: aqua;
+    font-size: 10px;
 }
 
 /*Centered using flexbox*/
@@ -21,8 +32,16 @@ body {
 
 /*Featured Image*/
 #gallery figure img {
-    max-width: 80vh;
+    max-width: 85vh;
     height: auto;
+    min-width: 640px;
+    min-height: 480px;
+}
+
+/*Featured Image Caption*/
+#gallery figure figcaption {
+    font-style: italic;
+    line-height: 2;
 }
 
 /*Thumbnail Container*/
